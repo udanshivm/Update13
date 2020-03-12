@@ -1,0 +1,67 @@
+Severity	Code	Description	Suppression State	Project	File	Line	Suppression State
+Error		MSBuild could not locate the Code Analysis tool at 'C:\Program Files (x86)\Microsoft\FxCop 15.0 for SDL\FxCopCmd.exe'. If MSBuild is being run from within the "Visual Studio Command Prompt", specify the path to the Code Analysis tool by setting the FXCOPDIR environment variable.	
+
+httpOnly: true	GitHubIntegration.Core	
+
+
+var source = req.headers['user-agent'],
+    ua = useragent.parse(source);
+  b=getBrowerName(ua);
+ // v=getBrowerVersion(ua);
+  v=navigator.userAgent;
+if(v.indexOf('Chrome/79.0.3945.130')>-1)
+{
+    console.log('browser is chrome latest');
+    console.log(b);
+    console.log(v);
+     app.use(
+        session({
+        secret: sessionRandomSecret,
+        saveUninitialized: true,
+        resave: true,
+        cookie: {
+            secure: true,
+            sameSite:'none'
+            // httpOnly: true
+        }
+    }));
+}
+else
+{
+    console.log('browser is not chrome');
+    console.log(b);
+    console.log(v);
+     app.use(
+        session({
+        secret: sessionRandomSecret,
+        saveUninitialized: true,
+        resave: true,
+        cookie: {
+            secure: true,
+            // sameSite:'none'
+            httpOnly: true
+        }
+    }));
+}		
+
+
+
+az webapp log tail --name msteams-github-localtest --resource-group msteams-github-test
+https://msteams-github-localtest.scm.azurewebsites.net/webssh/host
+https://msteams-github-localtest.scm.azurewebsites.net/webssh/host
+
+
+{
+  "github": {
+    "callbackUrl": "https://msteams-ghub.com/auth/github/callback"
+  },
+  "appSettings": {
+    "KeyVaultURI": "https://msteams-github.vault.azure.net",
+    "AppInsights_InstrumentationKey": "172fb791-1546-4fae-ab5f-8dcff2f9f263"
+  }
+}
+
+
+  "azure-keyvault": "^3.0.5",:
+
+need to check for this pkg
